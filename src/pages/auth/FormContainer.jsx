@@ -2,7 +2,7 @@ export const FormContainer = ({ children }) => (
   <div className="flex">
     <div className="relative overflow-clip rounded-r-full shadow-2xl shadow-neutral-200">
       <img
-        src="/background.webp"
+        src="/grb/background.webp"
         alt="Background"
         className="hidden md:flex h-screen object-cover"
       />
@@ -11,7 +11,7 @@ export const FormContainer = ({ children }) => (
     <div className="flex flex-1 flex-col justify-center items-center h-screen mx-4">
       <div className="relative">
         <img
-          src="/logo.webp"
+          src="/grb/logo.webp"
           alt="Logo"
           className="w-72 rounded-full shadow-lg shadow-neutral-200"
         />
