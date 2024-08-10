@@ -2,8 +2,8 @@
   "name": "grb",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "homepage": "https://giosofteng.github.io/grb",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
