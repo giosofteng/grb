@@ -4,6 +4,7 @@ export const Field = ({ label, type, values, setValues }) => (
       {label}
     </label>
     <input
+      required
       type={type}
       value={values[label]}
       onChange={(e) => setValues({ ...values, [label]: e.target.value })}
