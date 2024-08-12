@@ -10,6 +10,7 @@ export const SignInPage = () => (
         { label: "Password", type: "password" },
       ]}
       submitButtonText="Sign In"
+      onSubmit={(values) => console.log(values)}
     />
     <Link
       className="underline text-orange-400 hover:text-orange-500"

@@ -1,5 +1,5 @@
 export const FormContainer = ({ children }) => (
-  <div className="flex">
+  <div className="flex font-body">
     <div className="relative overflow-clip rounded-r-full shadow-2xl shadow-neutral-200">
       <img
         src="/grb/background.webp"

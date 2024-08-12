@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Field } from "./Field";
 
-export const AuthForm = ({ fields, submitButtonText }) => {
+export const AuthForm = ({ fields, submitButtonText, onSubmit }) => {
   const [fieldValues, setFieldValues] = useState(() => {
     const initialState = {};
     for (const field of fields) initialState[field.label] = "";
@@ -10,10 +10,10 @@ export const AuthForm = ({ fields, submitButtonText }) => {
 
   return (
     <form
-      className="w-72 my-8 p-4 rounded-2xl bg-neutral-200 font-body shadow-lg shadow-neutral-200"
+      className="w-72 mb-8 p-4 rounded-2xl bg-neutral-200 shadow-lg shadow-neutral-200"
       onSubmit={(e) => {
         e.preventDefault();
-        console.log(fieldValues);
+        onSubmit(fieldValues);
       }}
     >
       {fields.map((field) => (
