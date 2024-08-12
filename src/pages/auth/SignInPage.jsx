@@ -13,8 +13,8 @@ export const SignInPage = () => (
       onSubmit={(values) => console.log(values)}
     />
     <Link
-      className="underline text-orange-400 hover:text-orange-500"
       to="/sign-up"
+      className="underline text-orange-400 hover:text-orange-500"
     >
       Create an Account
     </Link>

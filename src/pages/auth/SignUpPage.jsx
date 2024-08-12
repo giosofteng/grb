@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FormContainer } from "./FormContainer";
 import { AuthForm } from "./AuthForm";
 
 export const SignUpPage = () => {
   const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
 
   return (
     <FormContainer>
@@ -30,9 +31,10 @@ export const SignUpPage = () => {
             return;
           }
           setErrorMessage("");
+          navigate("/");
         }}
       />
-      <Link className="underline text-orange-400 hover:text-orange-500" to="/">
+      <Link to="/" className="underline text-orange-400 hover:text-orange-500">
         Sign In
       </Link>
     </FormContainer>
