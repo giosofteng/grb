@@ -8,7 +8,7 @@ export const SignUpPage = () => {
 
   return (
     <FormContainer>
-      <div className="mt-8 mb-2 text-red-500">{errorMessage}</div>
+      {errorMessage && <div className="mt-8 text-red-500">{errorMessage}</div>}
       <AuthForm
         fields={[
           { label: "Username", type: "text" },
@@ -29,7 +29,7 @@ export const SignUpPage = () => {
             setErrorMessage("Passwords do not match");
             return;
           }
-          console.log(values);
+          setErrorMessage("");
         }}
       />
       <Link className="underline text-orange-400 hover:text-orange-500" to="/">

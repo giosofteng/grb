@@ -10,7 +10,7 @@ export const AuthForm = ({ fields, submitButtonText, onSubmit }) => {
 
   return (
     <form
-      className="w-72 mb-8 p-4 rounded-2xl bg-neutral-200 shadow-lg shadow-neutral-200"
+      className="w-72 my-8 p-4 rounded-2xl bg-neutral-200 shadow-lg shadow-neutral-200"
       onSubmit={(e) => {
         e.preventDefault();
         onSubmit(fieldValues);
