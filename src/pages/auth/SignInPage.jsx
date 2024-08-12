@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FormContainer } from "./FormContainer";
 import { AuthForm } from "./AuthForm";
 
 export const SignInPage = () => {
   const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
 
   return (
     <FormContainer>
@@ -19,13 +20,15 @@ export const SignInPage = () => {
         submitButtonText="Sign In"
         onSubmit={(values) => {
           if (values["Username"].length < 4) {
-            setErrorMessage("Please enter valid username");
+            setErrorMessage("Please enter a valid username");
             return;
           }
           if (values["Password"].length < 4) {
-            setErrorMessage("Please enter valid password");
+            setErrorMessage("Please enter a valid password");
             return;
           }
+          setErrorMessage("");
+          navigate("/");
         }}
       />
       <Link
