@@ -9,7 +9,9 @@ export const SignUpPage = () => {
 
   return (
     <FormContainer>
-      {errorMessage && <div className="mt-8 text-red-500">{errorMessage}</div>}
+      {errorMessage && (
+        <div className="mt-8 text-lg text-red-500">{errorMessage}</div>
+      )}
       <AuthForm
         fields={[
           { label: "Username", type: "text" },
