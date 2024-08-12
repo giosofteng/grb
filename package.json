@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist --repo https://x-access-token:${GITHUB_TOKEN}@github.com/giosofteng/grb.git"
+    "deploy": "gh-pages -d dist --repo https://github.com/giosofteng/grb.git"
   },
   "dependencies": {
     "react": "^18.3.1",
