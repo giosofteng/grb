@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FormContainer } from "./FormContainer";
 import { AuthForm } from "./AuthForm";
-import { UserContext } from "../../contexts/UserContext";
+import { UserContext } from "contexts/UserContext";
 
 export const SignInPage = () => {
   const [errorMessage, setErrorMessage] = useState("");
