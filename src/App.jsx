@@ -1,16 +1,17 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { SignInPage } from "./pages/auth/SignInPage";
-import { SignUpPage } from "./pages/auth/SignUpPage";
-import { UserContext } from "./contexts/UserContext";
+import { SignInPage } from "pages/auth/SignInPage";
+import { SignUpPage } from "pages/auth/SignUpPage";
+import { BoardListPage } from "pages/BoardListPage";
+import { UserContext } from "contexts/UserContext";
 import {
   setUserStorage,
   getUserStorage,
   removeUserStorage,
-} from "./services/user";
+} from "services/user";
 
 export const App = () => {
-  const [user, setUser] = useState(() => getUserStorage());
+  const [, setUser] = useState(() => getUserStorage());
 
   return (
     <UserContext.Provider
@@ -30,6 +31,7 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<SignInPage />} />
           <Route path="/sign-up" element={<SignUpPage />} />
+          <Route path="/boards" element={<BoardListPage />} />
         </Routes>
       </BrowserRouter>
     </UserContext.Provider>
