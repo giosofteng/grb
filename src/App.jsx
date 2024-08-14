@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { SignInPage } from "pages/auth/SignInPage";
 import { SignUpPage } from "pages/auth/SignUpPage";
 import { BoardListPage } from "pages/BoardListPage";
@@ -14,7 +14,7 @@ export const App = () => {
   const [, setUser] = useState(() => getUserStorage());
 
   return (
-    <BrowserRouter basename="/grb/">
+    <HashRouter>
       <UserContext.Provider
         value={{
           user: getUserStorage(),
@@ -34,6 +34,6 @@ export const App = () => {
           <Route path="/boards" element={<BoardListPage />} />
         </Routes>
       </UserContext.Provider>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
