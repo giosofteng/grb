@@ -14,26 +14,26 @@ export const App = () => {
   const [, setUser] = useState(() => getUserStorage());
 
   return (
-    <UserContext.Provider
-      value={{
-        user: getUserStorage(),
-        signIn: (user) => {
-          setUser(user);
-          setUserStorage(user);
-        },
-        signOut: () => {
-          setUser("");
-          removeUserStorage();
-        },
-      }}
-    >
-      <BrowserRouter basename="/grb/">
+    <BrowserRouter basename="/grb/">
+      <UserContext.Provider
+        value={{
+          user: getUserStorage(),
+          signIn: (user) => {
+            setUser(user);
+            setUserStorage(user);
+          },
+          signOut: () => {
+            setUser("");
+            removeUserStorage();
+          },
+        }}
+      >
         <Routes>
           <Route path="/" element={<SignInPage />} />
           <Route path="/sign-up" element={<SignUpPage />} />
           <Route path="/boards" element={<BoardListPage />} />
         </Routes>
-      </BrowserRouter>
-    </UserContext.Provider>
+      </UserContext.Provider>
+    </BrowserRouter>
   );
 };
