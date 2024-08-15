@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { CartContext } from "contexts/CartContext";
+
 const BOARD_ITEMS_INFO = [
   { desc: "Flowers", price: 44.95 },
   { desc: "Cartoon Mascot", price: 39.95 },
@@ -10,18 +13,22 @@ const BOARD_ITEMS_INFO = [
   { desc: "Pixel Art", price: 44.95 },
 ];
 
-export const BoardItem = ({ index }) => (
-  <div className="m-4 flex w-64 flex-col font-body text-neutral-600 shadow-md shadow-neutral-200">
-    <div className="relative">
-      <img
-        src={`/grb/board_${index}.webp`}
-        alt={`Board with ${BOARD_ITEMS_INFO[index].desc} design.`}
-      />
-      <div className="absolute left-0 top-0 h-full w-full bg-white/10 hover:bg-orange-400/50"></div>
+export const BoardItem = ({ index }) => {
+  const { addToCart } = useContext(CartContext);
+
+  return (
+    <div className="z-0 m-4 flex w-64 flex-col font-body text-neutral-600 shadow-md shadow-neutral-200">
+      <button onClick={() => addToCart(index)} className="relative">
+        <img
+          src={`/grb/board_${index}.webp`}
+          alt={`Board with ${BOARD_ITEMS_INFO[index].desc} design.`}
+        />
+        <div className="absolute left-0 top-0 h-full w-full bg-white/10 hover:bg-orange-400/50"></div>
+      </button>
+      <div className="flex justify-between p-2">
+        <div>{BOARD_ITEMS_INFO[index].desc}</div>
+        <div>{`$${BOARD_ITEMS_INFO[index].price}`}</div>
+      </div>
     </div>
-    <div className="flex justify-between p-2">
-      <div>{BOARD_ITEMS_INFO[index].desc}</div>
-      <div>{`$${BOARD_ITEMS_INFO[index].price}`}</div>
-    </div>
-  </div>
-);
+  );
+};
