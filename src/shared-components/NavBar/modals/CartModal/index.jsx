@@ -12,7 +12,7 @@ export const CartModal = ({ setIsCartOpen }) => {
           onClick={() => setIsCartOpen(false)}
           className="h-screen w-full"
         ></div>
-        <div className="h-screen w-full max-w-xl bg-white px-4 py-16 shadow-2xl shadow-neutral-200">
+        <div className="h-screen w-full max-w-xl bg-neutral-200 px-4 py-16 shadow-2xl shadow-neutral-200">
           {cartItems.length ? (
             <div className="flex h-full flex-col justify-between">
               <div className="flex flex-wrap justify-center">
@@ -25,12 +25,17 @@ export const CartModal = ({ setIsCartOpen }) => {
                   />
                 ))}
               </div>
-              <button onClick={clearCart} className="">
+              <button
+                onClick={clearCart}
+                className="mx-32 rounded-full bg-neutral-300 py-4 font-medium text-orange-400 shadow-2xl shadow-neutral-200 hover:bg-neutral-400"
+              >
                 CLEAR CART
               </button>
             </div>
           ) : (
-            <div>CART IS EMPTY</div>
+            <div className="flex h-full items-center justify-center text-xl font-medium text-neutral-600">
+              CART IS EMPTY
+            </div>
           )}
         </div>
       </div>
