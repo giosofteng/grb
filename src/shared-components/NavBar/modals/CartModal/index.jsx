@@ -12,7 +12,7 @@ export const CartModal = ({ setIsCartOpen }) => {
           onClick={() => setIsCartOpen(false)}
           className="h-screen w-full"
         ></div>
-        <div className="h-screen w-full max-w-xl bg-neutral-200 px-4 py-16 shadow-2xl shadow-neutral-200">
+        <div className="h-screen w-full max-w-xl bg-neutral-200 px-4 py-24 shadow-2xl shadow-neutral-200">
           {cartItems.length ? (
             <div className="flex h-full flex-col justify-between">
               <div className="flex flex-wrap justify-center">
@@ -20,14 +20,14 @@ export const CartModal = ({ setIsCartOpen }) => {
                   <img
                     src={`/grb/board_${boardIndex}.webp`}
                     alt={`Skateboard ${boardIndex}.`}
-                    className="m-2 h-32 w-32 rounded-full shadow-2xl shadow-neutral-200"
+                    className="m-2 h-20 w-20 rounded-full shadow-2xl shadow-neutral-200 sm:h-32 sm:w-32"
                     key={`item_${boardIndex}`}
                   />
                 ))}
               </div>
               <button
                 onClick={clearCart}
-                className="mx-32 rounded-full bg-neutral-300 py-4 font-medium text-orange-400 shadow-2xl shadow-neutral-200 hover:bg-neutral-400"
+                className="mx-28 rounded-full bg-neutral-300 px-4 py-4 font-medium text-orange-400 shadow-2xl shadow-neutral-200 hover:bg-neutral-400"
               >
                 CLEAR CART
               </button>
