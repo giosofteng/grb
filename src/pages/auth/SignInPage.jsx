@@ -36,7 +36,7 @@ export const SignInPage = () => {
         />
         <Link
           to="/sign-up"
-          className="underline text-orange-400 hover:text-orange-500"
+          className="text-orange-400 underline hover:text-orange-500"
         >
           Create an Account
         </Link>

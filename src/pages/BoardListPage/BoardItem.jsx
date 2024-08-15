@@ -11,13 +11,13 @@ const BOARD_ITEMS_INFO = [
 ];
 
 export const BoardItem = ({ index }) => (
-  <div className="flex flex-col w-64 m-4 font-body text-neutral-600 shadow-md shadow-neutral-200">
+  <div className="m-4 flex w-64 flex-col font-body text-neutral-600 shadow-md shadow-neutral-200">
     <div className="relative">
       <img
         src={`/grb/board_${index}.webp`}
         alt={`Board with ${BOARD_ITEMS_INFO[index].desc} design.`}
       />
-      <div className="absolute top-0 left-0 w-full h-full bg-white/10 hover:bg-orange-400/50"></div>
+      <div className="absolute left-0 top-0 h-full w-full bg-white/10 hover:bg-orange-400/50"></div>
     </div>
     <div className="flex justify-between p-2">
       <div>{BOARD_ITEMS_INFO[index].desc}</div>

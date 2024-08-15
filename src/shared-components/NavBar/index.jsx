@@ -8,11 +8,11 @@ export const NavBar = () => {
   const navigate = useNavigate();
 
   return (
-    <nav className="flex justify-center pl-2 pr-4 py-2 bg-neutral-300 font-head font-medium shadow-lg shadow-neutral-200">
-      <div className="flex justify-between items-center w-full max-w-5xl">
+    <nav className="flex justify-center bg-neutral-300 py-2 pl-2 pr-4 font-head font-medium shadow-lg shadow-neutral-200">
+      <div className="flex w-full max-w-5xl items-center justify-between">
         <div className="relative">
           <img src="/grb/logo.webp" alt="Logo" className="w-32" />
-          <div className="absolute top-0 left-0 w-full h-full bg-white/10"></div>
+          <div className="absolute left-0 top-0 h-full w-full bg-white/10"></div>
         </div>
         <div className="relative flex flex-1 justify-end">
           <button
@@ -23,13 +23,13 @@ export const NavBar = () => {
             <i className="fa-solid fa-user ml-3 text-2xl"></i>
           </button>
           {isUserMenuOpen && (
-            <div className="absolute top-10 right-7">
+            <div className="absolute right-7 top-10">
               <button
                 onClick={() => {
                   setIsUserMenuOpen(false);
                   user ? signOut() : navigate("/");
                 }}
-                className="flex items-center px-2 py-3 rounded-2xl bg-orange-400/75 text-neutral-100 shadow-md shadow-neutral-200 hover:bg-orange-400/90 hover:text-neutral-200"
+                className="flex items-center rounded-2xl bg-orange-400/75 px-2 py-3 text-neutral-100 shadow-md shadow-neutral-200 hover:bg-orange-400/90 hover:text-neutral-200"
               >
                 {user ? "Sign Out" : "Sign In"}
                 <i className="fa-solid fa-right-from-bracket ml-3 text-xl"></i>

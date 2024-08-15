@@ -4,20 +4,20 @@ export const FormContainer = ({ children }) => (
       <img
         src="/grb/background.webp"
         alt="Background"
-        className="hidden md:flex h-screen object-cover"
+        className="hidden h-screen object-cover md:flex"
       />
-      <div className="absolute top-0 left-0 w-full h-full bg-black/70"></div>
+      <div className="absolute left-0 top-0 h-full w-full bg-black/70"></div>
     </div>
-    <div className="flex flex-1 flex-col justify-center items-center h-screen mx-4">
+    <div className="mx-4 flex h-screen flex-1 flex-col items-center justify-center">
       <div className="relative">
         <img
           src="/grb/logo.webp"
           alt="Logo"
           className="w-72 rounded-full shadow-lg shadow-neutral-200"
         />
-        <div className="absolute top-0 left-0 w-full h-full bg-white/10"></div>
+        <div className="absolute left-0 top-0 h-full w-full bg-white/10"></div>
       </div>
-      <div className="mt-8 font-head font-black text-center text-4xl text-orange-500">
+      <div className="mt-8 text-center font-head text-4xl font-black text-orange-500">
         {"Giorgi's Rad Boards"}
       </div>
       {children}

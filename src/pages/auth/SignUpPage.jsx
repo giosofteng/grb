@@ -41,7 +41,7 @@ export const SignUpPage = () => {
         />
         <Link
           to="/"
-          className="underline text-orange-400 hover:text-orange-500"
+          className="text-orange-400 underline hover:text-orange-500"
         >
           Sign In
         </Link>

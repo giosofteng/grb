@@ -10,7 +10,7 @@ export const AuthForm = ({ fields, submitButtonText, onSubmit }) => {
 
   return (
     <form
-      className="w-72 my-8 p-4 rounded-2xl bg-neutral-300 shadow-lg shadow-neutral-200"
+      className="my-8 w-72 rounded-2xl bg-neutral-300 p-4 shadow-lg shadow-neutral-200"
       onSubmit={(e) => {
         e.preventDefault();
         onSubmit(fieldValues);
@@ -25,7 +25,7 @@ export const AuthForm = ({ fields, submitButtonText, onSubmit }) => {
           key={field.label}
         />
       ))}
-      <button className="w-full mt-4 py-2 rounded-2xl bg-orange-400 font-semibold text-white hover:bg-orange-500">
+      <button className="mt-4 w-full rounded-2xl bg-orange-400 py-2 font-semibold text-white hover:bg-orange-500">
         {submitButtonText}
       </button>
     </form>
